@@ -4,15 +4,16 @@ Site de apresentação do salão, com 31 serviços e pedido de marcação pelo W
 
 ## Publicar do GitHub para o Netlify
 
-1. No Netlify, escolha **Add new project → Import an existing project → GitHub**.
-2. Selecione o repositório **NONY09/site-salao**: https://github.com/NONY09/site-salao
-3. Use a branch **main**.
-4. Deixe **Base directory** e **Build command** vazios. Em **Publish directory**, use **dist**.
-5. Publique. O `netlify.toml` já define a pasta correta.
+1. Extraia o ficheiro ZIP.
+2. Crie um repositório no GitHub e envie o conteúdo da pasta `glow-carioca`. A pasta `dist` e o ficheiro `netlify.toml` devem ficar na raiz do repositório.
+3. No Netlify, escolha **Add new project → Import an existing project → GitHub** e selecione esse repositório.
+4. Use a branch em que enviou os ficheiros, normalmente `main`.
+5. Deixe **Base directory** e **Build command** vazios. Em **Publish directory**, use **dist**.
+6. Publique. O `netlify.toml` já define a pasta correta.
 
 Não precisa de instalar pacotes, configurar variáveis de ambiente ou criar uma base de dados. Os ficheiros já estão prontos. Depois de ligar o repositório, os próximos commits na branch de produção atualizam o site no Netlify.
 
-A pasta `dist` e o ficheiro `netlify.toml` ficam na raiz deste repositório, prontos para a importação pelo Netlify.
+Se o GitHub contiver uma pasta extra `glow-carioca` antes de `dist`, mova o seu conteúdo para a raiz ou configure essa pasta como a base no Netlify.
 
 Documentação: https://docs.netlify.com/build/configure-builds/overview/
 
@@ -59,4 +60,4 @@ Verificação visual em Chromium, no computador e em largura de telemóvel (375 
 
 O conjunto 25 € + 60 € + 15 € + 5,50 € apresentou corretamente **105,50 €**, com indicação “a partir de”. A mensagem gerada preservou o destinatário, serviços, preços, duração, nome e preferência de data/horário. Nenhuma mensagem foi enviada durante os testes. O envio final depende do WhatsApp da visitante e da confirmação do salão.
 
-Código disponível neste repositório, preparado para a publicação no Netlify. A configuração da hospedagem é feita ao importar o repositório.
+Preparado para publicação. Não foi publicado num repositório GitHub nem no Netlify nesta entrega.

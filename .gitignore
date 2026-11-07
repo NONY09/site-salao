@@ -1,0 +1,4 @@
+.openai/
+__qa*
+.DS_Store
+node_modules/

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>Glow Carioca — A beleza com alma carioca</title>
+  <meta name="description" content="Cabelo, unhas, sobrancelhas, pestanas e depilação em Santa Maria da Feira. Descubra a Glow Carioca, escolha os seus serviços e peça a sua marcação pelo WhatsApp.">
+  <meta property="og:title" content="Glow Carioca — A beleza com alma carioca">
+  <meta property="og:description" content="O seu momento de cuidado em Santa Maria da Feira. Conheça os serviços e peça a sua marcação pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/italiana-400.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="services.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Glow Carioca — início">
+      <span class="brand-seal" aria-hidden="true"><img src="assets/logo-original.jpg" alt="" width="346" height="768"></span>
+      <span class="brand-name">GLOW CARIOCA<small>BELEZA NATURAL</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a><a href="#espaco">O nosso espaço</a><a href="#galeria">Galeria</a><a href="#visite">Onde estamos</a>
+    </nav>
+    <a class="button button-small header-cta" href="#servicos">Marcar o meu momento <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle icon-button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação no telemóvel" hidden><a href="#servicos">Serviços e preços</a><a href="#espaco">O nosso espaço</a><a href="#galeria">Galeria</a><a href="#visite">Onde estamos</a></nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-star" aria-hidden="true">✦</span> SANTA MARIA DA FEIRA · PORTUGAL</p>
+        <h1 id="hero-title">A sua beleza.<br>Com alma<br><em>carioca.</em></h1>
+        <p class="hero-description">Um espaço para cuidar de si, realçar a sua essência e deixar a sua beleza acontecer.</p>
+        <a class="button hero-button" href="#servicos">Escolher o meu cuidado <span aria-hidden="true">↗</span></a>
+        <a class="hero-secondary text-link" href="#espaco">Entre. Este momento é seu. <span aria-hidden="true">↓</span></a>
+        <div class="hero-bottom"><span class="mini-line"></span> CABELO, BELEZA & AUTOESTIMA</div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-photo" src="assets/photos/photo-01.jpg" alt="Interior da Glow Carioca, com o nome do salão na parede, sofá e cadeiras de cabeleireiro" width="1200" height="675" fetchpriority="high">
+        <div class="hero-photo-shade"></div>
+        <span class="hero-photo-top">O SEU REFÚGIO DE BELEZA</span>
+        <div class="hero-photo-caption"><span>Um cuidado especial.<br><em>Um brilho só seu.</em></span><a href="#galeria" class="round-link" aria-label="Ver os nossos trabalhos">↗</a></div>
+        <div class="hero-stamp" aria-hidden="true"><span>GLOW</span><i>✦</i><small>FEITO PARA SI</small></div>
+      </div>
+    </section>
+    <div class="care-strip" aria-label="As nossas especialidades"><span>Cabelo</span><b aria-hidden="true">✦</b><span>Unhas</span><b aria-hidden="true">✦</b><span>Sobrancelhas & pestanas</span><b aria-hidden="true">✦</b><span>Depilação</span><b aria-hidden="true">✦</b><span>O seu momento</span></div>
+
+    <section class="section services-section" id="servicos" aria-labelledby="services-title">
+      <div class="section-intro"><div><p class="eyebrow">01 / O MENU DE CUIDADOS</p><h2 id="services-title">Escolha o que<br>lhe faz <em>bem.</em></h2></div><p>Dos pequenos detalhes às grandes mudanças.<br>Selecione os seus serviços e combine o seu<br class="desktop-only"> momento connosco pelo WhatsApp.</p></div>
+      <div class="service-toolbar">
+        <div class="filters" role="group" aria-label="Filtrar serviços por categoria">
+          <button class="filter active" data-category="cabelo" aria-pressed="true">Cabelo</button><button class="filter" data-category="unhas" aria-pressed="false">Unhas</button><button class="filter" data-category="olhar" aria-pressed="false">Sobrancelhas & pestanas</button><button class="filter" data-category="cera" aria-pressed="false">Cera</button><button class="filter" data-category="laser" aria-pressed="false">Laser</button><button class="filter" data-category="todos" aria-pressed="false">Todos</button>
+        </div>
+        <label class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="service-search" type="search" placeholder="Procurar um serviço" aria-label="Procurar um serviço em todas as categorias" autocomplete="off"></label>
+      </div>
+      <div class="service-list" id="service-list"></div>
+      <div class="services-bottom"><p class="catalog-note">Valores em euros. Os preços “a partir de” variam conforme o serviço.<br>A duração é indicativa. A equipa confirma os detalhes da sua marcação.</p><button id="show-more" class="text-link more-button">Ver todos os serviços de cabelo <span aria-hidden="true">↓</span></button></div>
+      <noscript><p>Para escolher serviços nesta página, ative o JavaScript. Também pode <a href="https://wa.me/351912162550" target="_blank" rel="noopener noreferrer">consultar os preços e pedir uma marcação pelo WhatsApp</a>.</p></noscript>
+    </section>
+
+    <section class="about-section" id="espaco" aria-labelledby="about-title">
+      <div class="about-image"><img src="assets/photos/photo-01.jpg" width="1200" height="675" loading="lazy" alt="O ambiente acolhedor da Glow Carioca em Santa Maria da Feira"><span>GLOW CARIOCA · O NOSSO ESPAÇO</span></div>
+      <div class="about-copy"><p class="eyebrow">02 / SINTA-SE EM CASA</p><h2 id="about-title">Há beleza em<br>tirar um tempo<br><em>para si.</em></h2><p>Em Santa Maria da Feira, a Glow Carioca junta o cuidado com a beleza a um ambiente acolhedor, com alma carioca.</p><p>Seja para renovar o cabelo, cuidar das unhas ou realçar o olhar, o seu momento começa com uma escolha: cuidar de si.</p><a class="text-link" href="https://wa.me/351912162550?text=Ol%C3%A1%2C%20Karen!%20Gostava%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Glow%20Carioca." target="_blank" rel="noopener noreferrer">Fale com a Karen <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+      <div class="section-intro"><div><p class="eyebrow">03 / BELEZA QUE ACONTECE AQUI</p><h2 id="gallery-title">O brilho está<br>nos <em>detalhes.</em></h2></div><div class="gallery-intro"><p>Um pouco do que fazemos.<br>Mais inspiração, todos os dias, no Instagram.</p><a class="text-link" href="https://www.instagram.com/glowcarioca/" target="_blank" rel="noopener noreferrer">@glowcarioca <span aria-hidden="true">↗</span></a></div></div>
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-tall" data-photo="assets/photos/work-06.jpg" data-caption="Cor e movimento · Glow Carioca" aria-label="Ampliar fotografia: cor e movimento"><img src="assets/photos/work-06.jpg" alt="Resultado de cabelo com cor e ondas no salão Glow Carioca" width="840" height="1120" loading="lazy"><span>Cor & movimento <b aria-hidden="true">↗</b></span></button>
+        <button class="gallery-item" data-photo="assets/photos/work-03.jpg" data-caption="Corte e acabamento · Glow Carioca" aria-label="Ampliar fotografia: corte e acabamento"><img src="assets/photos/work-03.jpg" alt="Cabelo liso com corte e acabamento realizados na Glow Carioca" width="840" height="1120" loading="lazy"><span>Corte & cuidado <b aria-hidden="true">↗</b></span></button>
+        <button class="gallery-item gallery-tall" data-photo="assets/photos/work-04.jpg" data-caption="Luz nos comprimentos · Glow Carioca" aria-label="Ampliar fotografia: luz nos comprimentos"><img src="assets/photos/work-04.jpg" alt="Cabelo longo com balayage no salão Glow Carioca" width="840" height="1120" loading="lazy"><span>Luz & naturalidade <b aria-hidden="true">↗</b></span></button>
+        <button class="gallery-item" data-photo="assets/photos/work-02.jpg" data-caption="Cuidado em cada detalhe · Glow Carioca" aria-label="Ampliar fotografia: um momento no salão"><img src="assets/photos/work-02.jpg" alt="Cabeleireira a cuidar do cabelo de uma cliente na Glow Carioca" width="840" height="1120" loading="lazy"><span>O seu momento <b aria-hidden="true">↗</b></span></button>
+      </div>
+      <p class="gallery-footnote">Trabalhos e fotografias do nosso salão.</p>
+    </section>
+
+    <section class="booking-banner" aria-labelledby="booking-title"><span class="banner-star" aria-hidden="true">✦</span><p class="eyebrow">UM CONVITE PARA CUIDAR DE SI</p><h2 id="booking-title">O seu próximo glow<br><em>começa aqui.</em></h2><a class="button button-light" href="#servicos">Escolher serviços e marcar <span aria-hidden="true">↗</span></a><p>Escolha com calma. Combinamos o resto pelo WhatsApp.</p></section>
+
+    <section class="section visit-section" id="visite" aria-labelledby="visit-title"><div><p class="eyebrow">04 / ESTAMOS À SUA ESPERA</p><h2 id="visit-title">Um cantinho carioca<br>em <em>Portugal.</em></h2><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Glow%20Carioca%20Avenida%205%20de%20Outubro%2070%20Santa%20Maria%20da%20Feira" target="_blank" rel="noopener noreferrer">Como chegar <span aria-hidden="true">↗</span></a></div><div class="visit-details"><div><span class="detail-label">VISITE-NOS</span><p>Avenida 5 de Outubro, n.º 70, Loja 2<br>Santa Maria da Feira, Aveiro · Portugal</p></div><div><span class="detail-label">O NOSSO HORÁRIO</span><p>Segunda a sábado · 09:30–19:00<br>Domingo · Encerrado</p></div><div><span class="detail-label">FALE CONNOSCO</span><a class="phone-link" href="https://wa.me/351912162550" target="_blank" rel="noopener noreferrer">+351 912 162 550 <span aria-hidden="true">↗</span></a><p class="small-copy">Marcações e informações pelo WhatsApp.</p></div></div></section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="#inicio">Glow Carioca<span>BELEZA NATURAL</span></a><p>A beleza com alma carioca.</p><div><a href="https://www.instagram.com/glowcarioca/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><button class="footer-link" id="privacy-open">Privacidade</button><span>© <span id="year">2026</span> Glow Carioca</span></div></footer>
+
+  <button class="selection-bar" id="selection-bar" hidden aria-haspopup="dialog"><span><span class="selection-title"><b id="selection-count">0</b> <span id="selection-label">serviços escolhidos</span></span><span id="selection-total" class="selection-total"></span></span><span class="selection-action">Rever e marcar <span aria-hidden="true">↗</span></span></button>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><div class="dialog-header"><div><p class="eyebrow">O SEU MOMENTO GLOW</p><h2 id="dialog-title">A sua <em>seleção.</em></h2></div><button class="icon-button close-dialog" aria-label="Fechar seleção" autofocus>×</button></div><p class="dialog-description">Está quase. Reveja os cuidados que escolheu.</p><div id="selected-list" class="selected-list"></div><div class="total-block"><span id="total-label">Total dos serviços</span><strong id="dialog-total"></strong><small id="total-note"></small></div><form id="booking-form"><div class="form-grid"><label class="field field-full">O seu nome <span>(opcional)</span><input name="name" id="client-name" type="text" maxlength="70" autocomplete="given-name" placeholder="Como podemos tratar por si?"></label><label class="field">Data preferida <span>(opcional)</span><input name="date" id="preferred-date" type="date"></label><label class="field">Preferência de horário<select id="preferred-period" name="period"><option value="">Sem preferência</option><option value="Manhã">Manhã</option><option value="Tarde">Tarde</option></select></label></div><p id="date-error" class="form-error" role="alert" hidden>Escolha uma data de hoje em diante.</p><a class="button whatsapp-button" id="whatsapp-checkout" href="https://wa.me/351912162550" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.7 7.4L3 20.5l1.4-4.8A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8.5 7.3c-.4-.3-1 .7-1 1.2 0 3 3.8 6.5 6.8 6.5.5 0 1.5-1 1.2-1.3l-1.8-1.2-.9.7c-1.4-.7-2.5-1.8-3.1-3.1l.6-.9Z"/></svg>Pedir marcação no WhatsApp <span aria-hidden="true">↗</span></a><p class="checkout-note">A mensagem abre no WhatsApp da Karen para a enviar.<br>A marcação e o valor final são confirmados pela equipa.</p></form><button id="continue-selection" class="continue-link">Continuar a escolher serviços</button></div></dialog>
+  <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-caption"><button class="icon-button close-dialog" aria-label="Fechar fotografia">×</button><img id="large-photo" alt=""><p id="photo-caption"></p></dialog>
+  <dialog id="privacy-dialog" class="privacy-dialog" aria-labelledby="privacy-title"><button class="icon-button close-dialog" aria-label="Fechar privacidade">×</button><p class="eyebrow">A SUA PRIVACIDADE</p><h2 id="privacy-title">Simples e transparente.</h2><p>Este site não utiliza cookies de publicidade, ferramentas de análise nem uma base de dados de clientes. A seleção e os campos de marcação permanecem apenas nesta página enquanto a utiliza.</p><p>Ao abrir o WhatsApp, os dados que preencheu são incluídos na mensagem preparada. Cabe-lhe enviar essa mensagem. A partir desse momento, aplicam-se as condições e a política de privacidade do WhatsApp.</p><p>Os links para Instagram e Google Maps abrem serviços externos. Para esclarecer como os dados recebidos são tratados pelo salão, contacte a Karen pelo WhatsApp <a href="https://wa.me/351912162550" target="_blank" rel="noopener noreferrer">+351 912 162 550</a>.</p></dialog>
+</body>
+</html>
