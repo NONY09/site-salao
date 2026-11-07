@@ -1,0 +1,34 @@
+name: Extrair e publicar arquivos do site
+on:
+  push:
+    paths:
+      - '.github/workflows/importar-site.yml'
+      - 'Glow_Carioca_Site_Netlify.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extrair arquivos do ZIP para a raiz
+        run: |
+          mkdir -p /tmp/glow-carioca
+          unzip -q Glow_Carioca_Site_Netlify.zip -d /tmp/glow-carioca
+          test -f /tmp/glow-carioca/glow-carioca/dist/index.html
+          cp -a /tmp/glow-carioca/glow-carioca/. .
+          test -f dist/index.html
+          test -f netlify.toml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .gitignore README.md dist docs netlify.toml
+          if ! git diff --cached --quiet; then
+            git commit -m "Adicionar site Glow Carioca pronto para Netlify"
+            git push
+          fi
